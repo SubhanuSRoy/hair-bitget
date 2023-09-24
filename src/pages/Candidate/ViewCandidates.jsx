@@ -20,7 +20,7 @@ function ViewCandidates() {
       axios
         .get(process.env.REACT_APP_BACKEND + "allCandidates")
         .then((res) => {
-          console.log(res.data);
+          // console.log(res.data);
           setallCandidates(res.data.reverse());
         })
         .catch((error) => {

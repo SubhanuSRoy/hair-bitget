@@ -6,8 +6,7 @@ import { GrTest } from "react-icons/gr";
 import { useNavigate } from "react-router-dom";
 
 function AddJob() {
-
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const [jobTitle, setJobTitle] = useState({});
   const [jtLoading, setJtLoading] = useState(false);
@@ -21,188 +20,142 @@ function AddJob() {
 
   const jobProfiles = [
     {
-      value: "Branch Manager",
-      label: "Branch Manager",
+      value: "Blockchain Developer",
+      label: "Blockchain Developer",
+      description: "Designs, develops, and maintains blockchain applications",
+    },
+    {
+      value: "Smart Contract Developer",
+      label: "Smart Contract Developer",
       description:
-        "Responsible for overseeing daily operations and managing staff at a bank branch.",
+        "Creates and deploys smart contracts on blockchain platforms",
     },
     {
-      value: "Software Developer",
-      label: "Software Developer",
+      value: "Cryptocurrency Analyst",
+      label: "Cryptocurrency Analyst",
+      description: "Analyzes cryptocurrency markets and trends",
+    },
+    {
+      value: "Security Engineer (Blockchain)",
+      label: "Security Engineer (Blockchain)",
+      description: "Implements security measures for blockchain systems",
+    },
+    {
+      value: "Blockchain UX/UI Designer",
+      label: "Blockchain UX/UI Designer",
+      description: "Designs user interfaces for blockchain applications",
+    },
+    {
+      value: "Blockchain Solutions Architect",
+      label: "Blockchain Solutions Architect",
       description:
-        "Designs, develops, and maintains software applications",
+        "Designs and oversees the implementation of blockchain solutions",
     },
     {
-      value: "Relationship Manager",
-      label: "Relationship Manager",
+      value: "Blockchain Researcher",
+      label: "Blockchain Researcher",
       description:
-        "Builds and maintains relationships with clients, offering financial advice and solutions.",
+        "Conducts research on blockchain technology and applications",
     },
     {
-      value: "Customer Service Executive",
-      label: "Customer Service Executive",
+      value: "Decentralized Application (dApp) Developer",
+      label: "Decentralized Application (dApp) Developer",
       description:
-        "Assists customers with inquiries, transactions, and problem resolution.",
+        "Develops decentralized applications on blockchain platforms",
     },
     {
-      value: "Loan Officer",
-      label: "Loan Officer",
+      value: "Blockchain Project Manager",
+      label: "Blockchain Project Manager",
       description:
-        "Evaluates loan applications, assesses creditworthiness, and processes loan approvals.",
+        "Manages projects related to blockchain development and implementation",
     },
     {
-      value: "Credit Analyst",
-      label: "Credit Analyst",
+      value: "Blockchain Quality Assurance (QA) Engineer",
+      label: "Blockchain Quality Assurance (QA) Engineer",
       description:
-        "Analyzes credit data and financial statements to determine credit risk for loan applicants.",
+        "Ensures the quality and reliability of blockchain applications",
     },
     {
-      value: "Teller",
-      label: "Teller",
+      value: "Cryptocurrency Wallet Developer",
+      label: "Cryptocurrency Wallet Developer",
+      description: "Develops digital wallets for storing cryptocurrencies",
+    },
+    {
+      value: "Blockchain Compliance Specialist",
+      label: "Blockchain Compliance Specialist",
+      description: "Ensures compliance with regulations in blockchain projects",
+    },
+    {
+      value: "Blockchain Marketing Specialist",
+      label: "Blockchain Marketing Specialist",
+      description: "Markets and promotes blockchain products and services",
+    },
+    {
+      value: "Blockchain Data Analyst",
+      label: "Blockchain Data Analyst",
+      description: "Analyzes data on the blockchain for insights and trends",
+    },
+    {
+      value: "Cryptocurrency Exchange Developer",
+      label: "Cryptocurrency Exchange Developer",
+      description: "Develops and maintains cryptocurrency exchange platforms",
+    },
+    {
+      value: "Blockchain System Administrator",
+      label: "Blockchain System Administrator",
       description:
-        "Handles cash transactions, processes deposits, withdrawals, and provides account information.",
+        "Administers and maintains blockchain network infrastructure",
     },
     {
-      value: "Financial Advisor",
-      label: "Financial Advisor",
+      value: "Blockchain Legal Consultant",
+      label: "Blockchain Legal Consultant",
       description:
-        "Provides investment advice and financial planning services to customers.",
+        "Provides legal advice and consultation for blockchain projects",
     },
     {
-      value: "Risk Manager",
-      label: "Risk Manager",
+      value: "Blockchain Integration Specialist",
+      label: "Blockchain Integration Specialist",
       description:
-        "Identifies and assesses potential risks that may impact the bank's operations.",
+        "Integrates blockchain technology with existing systems and processes",
     },
     {
-      value: "Operations Manager",
-      label: "Operations Manager",
+      value: "Cryptocurrency Mining Engineer",
+      label: "Cryptocurrency Mining Engineer",
+      description: "Manages and optimizes cryptocurrency mining operations",
+    },
+    {
+      value: "Blockchain Educator",
+      label: "Blockchain Educator",
+      description: "Provides education and training on blockchain technology",
+    },
+    {
+      value: "Blockchain UI/UX Researcher",
+      label: "Blockchain UI/UX Researcher",
+      description: "Conducts user research for blockchain interface design",
+    },
+    {
+      value: "Cryptocurrency Compliance Officer",
+      label: "Cryptocurrency Compliance Officer",
       description:
-        "Oversees day-to-day operations, including administrative tasks and compliance.",
+        "Ensures compliance with regulatory requirements in cryptocurrency operations",
     },
     {
-      value: "Treasury Analyst",
-      label: "Treasury Analyst",
+      value: "Blockchain Ethical Hacker",
+      label: "Blockchain Ethical Hacker",
       description:
-        "Manages the bank's liquidity, cash flow, and financial assets.",
+        "Tests and identifies security vulnerabilities in blockchain systems",
     },
     {
-      value: "Mortgage Consultant",
-      label: "Mortgage Consultant",
+      value: "Cryptocurrency Financial Analyst",
+      label: "Cryptocurrency Financial Analyst",
       description:
-        "Assists customers in obtaining mortgage loans for real estate purchases.",
+        "Analyzes financial aspects of cryptocurrency markets and investments",
     },
     {
-      value: "Audit Officer",
-      label: "Audit Officer",
+      value: "Blockchain Social Media Manager",
+      label: "Blockchain Social Media Manager",
       description:
-        "Conducts internal audits to ensure compliance with regulations and internal policies.",
-    },
-    {
-      value: "Marketing Specialist",
-      label: "Marketing Specialist",
-      description:
-        "Develops and implements marketing campaigns to promote banking products and services.",
-    },
-    {
-      value: "Human Resources Manager",
-      label: "Human Resources Manager",
-      description:
-        "Manages HR functions, including recruitment, training, and employee relations.",
-    },
-    {
-      value: "IT Support Specialist",
-      label: "IT Support Specialist",
-      description:
-        "Provides technical support and maintains the bank's IT infrastructure.",
-    },
-    {
-      value: "Business Analyst",
-      label: "Business Analyst",
-      description:
-        "Analyzes data and market trends to support strategic decision-making.",
-    },
-    {
-      value: "Compliance Officer",
-      label: "Compliance Officer",
-      description:
-        "Ensures the bank adheres to regulatory and legal requirements.",
-    },
-    {
-      value: "Branch Operations Executive",
-      label: "Branch Operations Executive",
-      description: "Manages various operational tasks within a bank branch.",
-    },
-    {
-      value: "Product Manager",
-      label: "Product Manager",
-      description: "Develops and manages banking products and services.",
-    },
-    {
-      value: "Wealth Manager",
-      label: "Wealth Manager",
-      description:
-        "Offers personalized financial and investment advice to high-net-worth clients.",
-    },
-    {
-      value: "Digital Banking Specialist",
-      label: "Digital Banking Specialist",
-      description:
-        "Supports and promotes digital banking solutions and services.",
-    },
-    {
-      value: "Fraud Investigator",
-      label: "Fraud Investigator",
-      description:
-        "Detects and investigates fraudulent activities within the bank.",
-    },
-    {
-      value: "Trade Finance Specialist",
-      label: "Trade Finance Specialist",
-      description:
-        "Manages international trade transactions and financing for clients.",
-    },
-    {
-      value: "Collections Officer",
-      label: "Collections Officer",
-      description:
-        "Handles delinquent accounts and implements collection strategies.",
-    },
-    {
-      value: "Economist",
-      label: "Economist",
-      description:
-        "Analyzes economic trends and provides insights for informed decision-making.",
-    },
-    {
-      value: "Legal Counsel",
-      label: "Legal Counsel",
-      description:
-        "Provides legal advice on regulatory matters, contracts, and disputes.",
-    },
-    {
-      value: "Compliance Analyst",
-      label: "Compliance Analyst",
-      description:
-        "Assists in monitoring and ensuring the bank's compliance with regulations.",
-    },
-    {
-      value: "Business Development Officer",
-      label: "Business Development Officer",
-      description:
-        "Expands the bank's customer base and explores new business opportunities.",
-    },
-    {
-      value: "Data Analyst",
-      label: "Data Analyst",
-      description:
-        "Analyzes financial data to extract insights and support strategic planning.",
-    },
-    {
-      value: "Cash Management Specialist",
-      label: "Cash Management Specialist",
-      description:
-        "Manages the bank's cash flow and liquidity to optimize financial operations.",
+        "Manages social media presence and engagement for blockchain projects",
     },
   ];
 
@@ -274,7 +227,6 @@ function AddJob() {
       });
   };
 
-  
   const addJob = async (e) => {
     e.preventDefault();
     console.log(jobTitle);
@@ -286,19 +238,16 @@ function AddJob() {
       })
       .then((res) => {
         console.log(res);
-        navigate("/viewJobs")
+        navigate("/viewJobs");
       })
       .catch((err) => {
         console.log(err);
       });
   };
 
-
   useEffect(() => {
     document.title = `Add New Job | hAIr`;
-  
-    
-  }, [])
+  }, []);
   return (
     <div className="flex flex-col w-full h-full mt-4 gap-4">
       <form
@@ -313,7 +262,7 @@ function AddJob() {
             <p>
               Choose from{" "}
               <span className="text-prim font-medium">
-                25+ Axis Bank relevant titles
+                25+ Bitget relevant titles
               </span>{" "}
               or create your own job title and press Enter to let hAIr generate
               the <span className="text-prim font-medium">Job Description</span>
